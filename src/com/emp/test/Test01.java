@@ -29,16 +29,17 @@ public class Test01 {
 	
 	private EmpMapper mapper=session.getMapper(EmpMapper.class);
 	
-	//²éÑ¯ËùÓÐ;
+	//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½;
 	@Test
 	public void selectAll() {
-		System.out.println("±àºÅ\tÐÕÃû\tÈÕÆÚ\tÐ½Ë®");
+		System.out.println("ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½ï¿½\tÐ½Ë®");
 		for(Emp emp:mapper.selectAll()) {
+			System.out.println("asdasdasd");
 			System.out.println(emp.getEmpno()+"\t"+emp.getName()+"\t"+emp.getHiredate()+"\t"+emp.getSal()+";");
 		}
 	}
 	
-	//¶à¸ö²ÎÊý²éÑ¯;
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯;
 	@Test
 	public void selectEmp() {
 		Map<Object,Object> map=new HashMap<Object,Object>();
@@ -48,22 +49,22 @@ public class Test01 {
 		System.out.println(emp);
 	}
 	
-	//ÐÂÔö;
+	//ï¿½ï¿½ï¿½ï¿½;
 	@Test
 	public void insertEmp() {
-		Emp emp=new Emp("¹þ¹þ",new Date(),2000);
+		Emp emp=new Emp("ï¿½ï¿½ï¿½ï¿½",new Date(),2000);
 		int num=mapper.insertEmp(emp);
 		System.out.println(num>0?"ok":"no");
 	}
 	
-	//É¾³ý;
+	//É¾ï¿½ï¿½;
 	@Test
 	public void deleteEmp() {
 		int num=mapper.deleteEmp(5);
 		System.out.println(num>0?"ok":"no");
 	}
 	
-	//ÐÞ¸Ä;
+	//ï¿½Þ¸ï¿½;
 	@Test
 	public void updateEmp() {
 		Emp emp=new Emp(1,"qeq",new Date(),1111);
@@ -71,12 +72,12 @@ public class Test01 {
 		System.out.println(num>0?"ok":"no");
 	}
 	
-	//¹Ø±Õ;
+	//ï¿½Ø±ï¿½;
 	@After
 	public void closeAll() {
 		if(session!=null) {
 			session.commit();
-			System.out.println("¹Ø±Õ");
+			System.out.println("ï¿½Ø±ï¿½");
 			session.close();
 		}
 	}
