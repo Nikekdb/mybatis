@@ -35,6 +35,7 @@ public class Test01 {
 		System.out.println("���\t����\t����\tнˮ");
 		for(Emp emp:mapper.selectAll()) {
 			System.out.println("asdasdasd");
+			System.out.println("asdasdasd");
 			System.out.println(emp.getEmpno()+"\t"+emp.getName()+"\t"+emp.getHiredate()+"\t"+emp.getSal()+";");
 		}
 	}
