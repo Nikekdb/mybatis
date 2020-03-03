@@ -30,6 +30,7 @@ public class Test01 {
 	private EmpMapper mapper=session.getMapper(EmpMapper.class);
 	
 	//��ѯ����;
+	//阿三大苏打反对法;
 	@Test
 	public void selectAll() {
 		System.out.println("���\t����\t����\tнˮ");
